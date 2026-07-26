@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+data/chroma_store/
+eval_results/
+.git/
+.gitignore
+README.md
