@@ -1,0 +1,48 @@
+EMPLOYMENT AGREEMENT AND NON-DISCLOSURE AGREEMENT
+
+This agreement is entered into between NovaTech Solutions Pvt. Ltd.
+("Company") and Ms. Divya Krishnan ("Employee") for the role of Software
+Engineer.
+
+1. CONFIDENTIALITY
+The Employee agrees to keep all proprietary information, source code,
+client data, and business strategies confidential during employment and
+for a period of 5 years after termination of employment, regardless of
+the reason for termination.
+
+2. INTELLECTUAL PROPERTY ASSIGNMENT
+All work product, inventions, and code created by the Employee during the
+term of employment shall be the sole property of the Company. This
+includes any work created using personal equipment or during personal
+time, if related in any way to the Company's current or anticipated
+business activities.
+
+3. NON-COMPETE
+Upon termination of employment for any reason, the Employee agrees not to
+work for or consult with any competing company within the software
+industry, anywhere in India, for a period of 12 months.
+
+4. TRAINING BOND
+The Company shall provide specialized onboarding training valued at
+Rs. 1,50,000. Should the Employee resign within 18 months of joining, the
+Employee shall be liable to reimburse the full training cost as
+liquidated damages, payable within 15 days of resignation.
+
+5. TERMINATION
+The Company may terminate this agreement without cause by providing 30
+days written notice or salary in lieu thereof. The Employee must provide
+90 days written notice to resign.
+
+6. DISPUTE RESOLUTION
+Any disputes arising from this agreement shall be resolved through binding
+arbitration in Bengaluru, in accordance with the Arbitration and
+Conciliation Act. The Employee shall bear their own legal costs regardless
+of outcome.
+
+7. GOVERNING LAW
+This agreement is governed by the laws of India.
+
+Signed,
+Company: NovaTech Solutions Pvt. Ltd.
+Employee: Divya Krishnan
+Date: July 5, 2026

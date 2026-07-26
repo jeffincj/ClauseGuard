@@ -1,0 +1,327 @@
+{
+  "summary": {
+    "grounded_total": 18,
+    "grounded_first_try_pass_rate": 1.0,
+    "grounded_answered_after_retry": 0,
+    "grounded_gave_up": 0,
+    "avg_retries_per_grounded_question": 0.0,
+    "adversarial_total": 12,
+    "hallucination_resistance_rate": 1.0,
+    "adversarial_correctly_abstained": 12,
+    "adversarial_flagged_for_review": 0
+  },
+  "results": [
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "security_deposit",
+      "question": "What is the security deposit amount, and under what conditions is it refundable or forfeited?",
+      "answer": "The security deposit amount is Rs. 66,000 (as stated in Clause 3). It is refundable within 30 days of vacating the premises, subject to deductions for damages, unpaid utility bills, or unpaid rent dues (Clause 3). However, if the Tenant vacates before the completion of the 6-month lock-in period, the entire security deposit shall be forfeited as a penalty (Clause 4).",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 6.23
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "lock_in_period",
+      "question": "Is there a lock-in period, and what penalty applies if the tenant leaves early?",
+      "answer": "Yes, there is a lock-in period. According to clause 4 (LOCK-IN PERIOD), \"There shall be a lock-in period of 6 months from the commencement date. Should the Tenant vacate before the completion of the lock-in period, the Tenant shall forfeit the entire security deposit as a penalty, regardless of the reason for vacating.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 2.83
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "maintenance_responsibility",
+      "question": "Who is responsible for maintenance, repairs, and associated costs \u2014 landlord or tenant?",
+      "answer": "The responsibility for maintenance, repairs, and associated costs is shared. According to Clause 5 (MAINTENANCE), \"The Tenant shall be responsible for routine maintenance including minor plumbing and electrical repairs up to Rs. 1,000 per incident. The Landlord shall be responsible for structural repairs and major appliance failures not caused by tenant negligence.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 3.97
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "rent_escalation",
+      "question": "Does the agreement specify an annual rent increase percentage, and how is it applied?",
+      "answer": "Yes, the agreement specifies an annual rent increase percentage. According to Clause 6 (RENT ESCALATION), \"the rent shall increase by 10% annually, at the Landlord's sole discretion, without requiring mutual agreement\" upon renewal after the initial 11-month term.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 0.83
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "notice_period",
+      "question": "What notice period is required from either party to terminate the agreement?",
+      "answer": "According to clause 7 (NOTICE PERIOD), either party may terminate this agreement after the lock-in period by providing 60 days written notice. However, the Landlord may terminate with 30 days notice if the Tenant is found in breach of any clause.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 1.65
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "grounded",
+      "category": "unauthorized_entry",
+      "question": "Under what conditions and with what notice can the landlord enter the property?",
+      "answer": "According to clause 8 (LANDLORD ENTRY), the Landlord can enter the premises \"at any time deemed necessary, with reasonable effort to inform the Tenant in advance.\" No specific notice period is mentioned.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 3.4
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "What is the pet policy for this rental \u2014 are dogs or cats allowed?",
+      "answer": "There is no information available in the provided document excerpts regarding a pet policy, including whether dogs or cats are allowed. The excerpts do not mention pets at all.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 0.65
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Does this lease include a parking spot, and is there an extra charge for it?",
+      "answer": "The excerpts do not contain enough information to answer confidently. There is no mention of a parking spot or any associated charges in the provided clauses.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 2.2
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "What happens to the security deposit if the tenant is called up for reservist duty?",
+      "answer": "There is no information in the provided excerpts regarding what happens to the security deposit if the tenant is called up for reservist duty. The excerpts only mention that the security deposit shall be forfeited if the Tenant vacates before the completion of the lock-in period (Clause 4), but do not address the specific scenario of reservist duty.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 1.67
+    },
+    {
+      "doc_type": "rental",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Is subletting the apartment to a third party permitted under this agreement?",
+      "answer": "There is no information in the provided excerpts regarding subletting the apartment to a third party. The excerpts do not contain any clause that explicitly permits or prohibits subletting.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 3.77
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "interest_rate_type",
+      "question": "Is the interest rate fixed or floating, and under what conditions can it be reset?",
+      "answer": "The interest rate is floating, currently set at 14.5% per annum. According to Clause 2, \"The Lender reserves the right to reset the rate at any time based on internal benchmark rate changes, with 15 days notice to the Borrower.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 6.89
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "prepayment_penalty",
+      "question": "Is there a penalty for prepaying or foreclosing the loan early, and how much?",
+      "answer": "Yes, there is a penalty for prepaying or foreclosing the loan early. According to Clause 4 (PREPAYMENT), \"a foreclosure charge of 4% of the outstanding principal shall apply to any prepayment made before the completion of 24 months.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 4.65
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "late_payment_penalty",
+      "question": "What is the penalty for late EMI payment, and is it compounded?",
+      "answer": "The penalty for late EMI payment is a penal interest of 3% per month, which is compounded monthly, as stated in Clause 5: \"a penal interest of 3% per month shall be charged on the overdue amount, compounded monthly until the overdue amount is cleared in full.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 2.54
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "collateral_clause",
+      "question": "What collateral is pledged, and what happens to it in case of default?",
+      "answer": "According to Clause 6 (COLLATERAL AND DEFAULT), \"This is an unsecured loan.\" Therefore, no collateral is pledged. In the event of default, the Lender may report the default to credit bureaus and initiate recovery proceedings, but there is no mention of any collateral being forfeited or seized.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 3.13
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "hidden_charges",
+      "question": "What processing fees, insurance add-ons, or other charges are bundled into the loan?",
+      "answer": "According to Clause 3 (PROCESSING FEES AND CHARGES), the following charges are bundled into the loan: \n- A one-time processing fee of 2.5% of the loan amount plus applicable taxes, \n- A mandatory loan protection insurance premium of Rs. 8,500.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 6.53
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "grounded",
+      "category": "guarantor_liability",
+      "question": "If there is a guarantor, what is the extent of their liability on default?",
+      "answer": "According to Clause 7 (GUARANTOR), the Guarantor's liability \"shall be co-extensive with that of the Borrower and shall extend to the entire outstanding loan amount, including all penalties and charges, in the event of Borrower default.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 10.6
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "What happens to the loan if the Borrower passes away before repayment?",
+      "answer": "The excerpts do not contain enough information to answer confidently what happens to the loan if the Borrower passes away before repayment. However, clause 7 mentions a Guarantor, Mr. Sanjay Mehta, whose \"liability shall be co-extensive with that of the Borrower and shall extend to the entire outstanding loan amount, including all penalties and charges, in the event of Borrower default.\" This implies the Guarantor may be liable, but it does not explicitly address the scenario of the Borrower's death.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 5.98
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Does this loan qualify for any government interest subsidy scheme?",
+      "answer": "There is no information in the provided excerpts about the loan qualifying for any government interest subsidy scheme. The excerpts only discuss the terms and conditions of the loan agreement between the Lender and the Borrower, without mentioning any government subsidy schemes.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 5.13
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Can the Borrower transfer this loan to a co-applicant's name?",
+      "answer": "The excerpts do not contain enough information to answer confidently. There is no mention of loan transfer or co-applicant provisions in the provided document excerpts.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 7.37
+    },
+    {
+      "doc_type": "loan",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Is there a cooling-off period during which the Borrower can cancel the loan penalty-free?",
+      "answer": "There is no information in the provided excerpts about a cooling-off period that would allow the Borrower to cancel the loan penalty-free. The excerpts do mention prepayment conditions and associated charges (Clause 4), but they do not address a cooling-off period for cancellation.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 8.15
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "non_compete",
+      "question": "What is the duration and geographic/industry scope of any non-compete clause?",
+      "answer": "The non-compete clause has a duration of 12 months and applies to the software industry, anywhere in India, as stated in clause 3: \"Upon termination of employment for any reason, the Employee agrees not to work for or consult with any competing company within the software industry, anywhere in India, for a period of 12 months.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 4.4
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "ip_assignment",
+      "question": "Does the agreement assign ownership of work created outside work hours or unrelated to the employer's business?",
+      "answer": "According to clause 2, INTELLECTUAL PROPERTY ASSIGNMENT, the agreement assigns ownership of work created outside work hours if it is \"related in any way to the Company's current or anticipated business activities.\" However, it does not explicitly assign ownership of work created outside work hours that is unrelated to the employer's business. The relevant clause content states: \"This includes any work created using personal equipment or during personal time, if related in any way to the Company's current or anticipated business activities.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 11.6
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "confidentiality_duration",
+      "question": "How long do confidentiality obligations last after employment ends?",
+      "answer": "Confidentiality obligations last for a period of 5 years after termination of employment, as stated in Clause 1: \"The Employee agrees to keep all proprietary information, source code, client data, and business strategies confidential during employment and for a period of 5 years after termination of employment, regardless of the reason for termination.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 2.5
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "termination_notice",
+      "question": "What notice period or severance applies if the employer terminates without cause?",
+      "answer": "According to clause 5 (TERMINATION), if the Company terminates the agreement without cause, they must provide \"30 days written notice or salary in lieu thereof\".",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 6.8
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "liquidated_damages",
+      "question": "Is there a training bond or liquidated damages clause if the employee resigns early?",
+      "answer": "Yes, there is a training bond or liquidated damages clause. According to clause 4 (TRAINING BOND), \"Should the Employee resign within 18 months of joining, the Employee shall be liable to reimburse the full training cost as liquidated damages, payable within 15 days of resignation.\" The training cost is valued at Rs. 1,50,000.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 20.06
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "grounded",
+      "category": "dispute_resolution",
+      "question": "What is the dispute resolution mechanism (arbitration/court) and jurisdiction specified?",
+      "answer": "The dispute resolution mechanism is binding arbitration, as specified in Clause 6: \"Any disputes arising from this agreement shall be resolved through binding arbitration in Bengaluru, in accordance with the Arbitration and Conciliation Act.\" The jurisdiction is governed by the laws of India, as stated in Clause 7: \"This agreement is governed by the laws of India.\"",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "seconds": 2.15
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Does this employment agreement include stock options or equity compensation?",
+      "answer": "No, the employment agreement does not include stock options or equity compensation. None of the clauses (1-7) mention stock options or equity compensation.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 4.35
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "What is the notice period if the Employee is on probation?",
+      "answer": "There is not enough information to answer confidently, as the excerpts do not mention a probation period or its corresponding notice period. The notice period mentioned in clause 5 only applies to resignation after the employment has started, but does not specify if the Employee is on probation.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 2.33
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Does the Company provide relocation assistance under this agreement?",
+      "answer": "The excerpts do not contain enough information to answer confidently. There is no mention of relocation assistance in the provided clauses.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 2.36
+    },
+    {
+      "doc_type": "nda_employment",
+      "test_kind": "adversarial",
+      "category": null,
+      "question": "Is remote work or work-from-home permitted under this agreement?",
+      "answer": "The excerpts do not contain enough information to answer confidently. There is no mention of remote work or work-from-home in the provided clauses.",
+      "final_status": "ANSWERED",
+      "retries_used": 0,
+      "correctly_abstained": true,
+      "seconds": 6.6
+    }
+  ]
+}

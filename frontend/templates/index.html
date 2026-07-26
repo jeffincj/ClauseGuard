@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClauseGuard — Self-Healing Document Risk Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">§</span>
+    <span class="brand-name">ClauseGuard</span>
+  </div>
+  <div class="brand-tagline">Self-Healing Document Risk Analyzer</div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1>Read the fine print<br><em>before it reads you.</em></h1>
+    <p class="hero-sub">Upload a rental, loan, or employment agreement. ClauseGuard retrieves the exact clauses, checks its own answer against them, and rewrites its question and retries if it can't stay grounded — rather than guessing.</p>
+  </section>
+
+  <section class="folder">
+    <div class="folder-tabs">
+      <button class="tab active" data-doctype="rental">Rental</button>
+      <button class="tab" data-doctype="loan">Loan</button>
+      <button class="tab" data-doctype="nda_employment">NDA / Employment</button>
+    </div>
+
+    <div class="folder-body">
+      <div class="upload-zone" id="dropZone">
+        <input type="file" id="fileInput" accept=".pdf,.txt,.jpg,.jpeg,.png" multiple hidden>
+        <div class="upload-icon">⌘</div>
+        <p class="upload-title">Drop your document here</p>
+        <p class="upload-sub">PDF or TXT — indexed locally, nothing leaves this session's vector store</p>
+        <button class="btn-outline" id="browseBtn">Browse file</button>
+      </div>
+      <div class="upload-status" id="uploadStatus"></div>
+    </div>
+  </section>
+
+  <section class="workspace" id="workspace" hidden>
+
+    <div class="workspace-tabs">
+      <button class="wtab active" data-panel="scan">Full Risk Scan</button>
+      <button class="wtab" data-panel="chat">Ask a Question</button>
+    </div>
+
+    <div class="panel" id="panel-scan">
+      <div class="panel-head">
+        <p>Runs the self-healing pipeline once per clause category. Each result is stamped only after passing its own groundedness check.</p>
+        <button class="btn-primary" id="runScanBtn">Run full scan</button>
+      </div>
+      <div class="scan-results" id="scanResults"></div>
+    </div>
+
+    <div class="panel" id="panel-chat" hidden>
+      <div class="chat-log" id="chatLog">
+        <div class="chat-hint">Ask anything about the uploaded document — e.g. "What happens if I pay rent 5 days late?"</div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Ask about a clause…">
+        <button class="btn-primary" id="chatSendBtn">Ask</button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<template id="clause-card-template">
+  <article class="clause-card">
+    <div class="stamp-layer">
+      <div class="stamp"></div>
+    </div>
+    <div class="clause-head">
+      <h3 class="clause-label"></h3>
+      <span class="severity-pill"></span>
+    </div>
+    <p class="clause-why"></p>
+    <p class="clause-answer"></p>
+    <div class="clause-meta"></div>
+  </article>
+</template>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
