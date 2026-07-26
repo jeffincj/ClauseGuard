@@ -4,13 +4,14 @@ import uuid
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.embeddings import Embeddings
 from langchain_chroma import Chroma
+from chromadb.utils import embedding_functions
 from pdf2image import convert_from_path
 from PIL import Image
 import pytesseract
 
-from app.core.config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL
+from app.core.config import CHROMA_PERSIST_DIR
 
 _embeddings = None
 
@@ -22,14 +23,31 @@ MIN_CHARS_PER_PAGE_BEFORE_OCR_FALLBACK = 40
 IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png")
 
 
+class LightweightONNXEmbeddings(Embeddings):
+    """
+    Thin LangChain-compatible wrapper around ChromaDB's bundled ONNX
+    MiniLM embedding function. Deliberately avoids sentence-transformers/
+    PyTorch, which are heavy enough to cause out-of-memory crashes on
+    free-tier hosts with ~512MB RAM. Same underlying MiniLM model quality,
+    much smaller runtime footprint.
+    """
+
+    def __init__(self):
+        self._ef = embedding_functions.ONNXMiniLM_L6_V2()
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        return [list(vec) for vec in self._ef(texts)]
+
+    def embed_query(self, text: str) -> list[float]:
+        return list(self._ef([text])[0])
+
+
 def get_embeddings():
     """Lazily load the embedding model (kept singleton to avoid reloading per request)."""
     global _embeddings
     if _embeddings is None:
-        _embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+        _embeddings = LightweightONNXEmbeddings()
     return _embeddings
-
-
 def _ocr_image(image: Image.Image) -> str:
     return pytesseract.image_to_string(image)
 
